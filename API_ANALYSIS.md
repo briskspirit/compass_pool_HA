@@ -85,26 +85,26 @@ The token is a 32-char hex string used in all subsequent requests.
     "last_online": "2026-03-10 00:11:43",
     "server_time": "2026-03-10 00:11:47",
     "currentState": {
-      "MD": 0,          // Mode: 0=Off
-      "HTS": 10,        // Heat Temperature Setpoint
-      "DB": 10,         // Deadband
-      "LCS": 47,        // Last Coil Sensor reading
+      "MD": 0,          // Operating mode (0=Off, 1=Pool Heat)
+      "HTS": 10,        // Evap sensor calibration (offset-10: actual = value - 10)
+      "DB": 10,         // Water sensor calibration (offset-10: actual = value - 10)
+      "LCS": 47,        // Unknown live reading (changes frequently)
       "FLT": 0,         // Fault code (0 = no fault)
-      "LKD": 0,         // Locked (0=unlocked)
+      "LKD": 0,         // Locked (0=unlocked, 1=locked)
       "CF": 0,          // Config flags
-      "RMT": 82,        // Remote TSTAT
+      "RMT": 82,        // Water temperature (°F, live sensor)
       "FAN": 0,         // Fan mode
-      "SCH": 0,         // Schedule
-      "CAL": 2,         // Calibration offset
-      "AXD": 50,        // Anti Short Cycle Delay
-      "MXH": 104,       // Max Heat setpoint
-      "MNH": 50,        // Min Heat setpoint
+      "SCH": 0,         // Schedule mode
+      "CAL": 2,         // Anti short cycle delay (minutes)
+      "AXD": 50,        // Defrost end temperature (°F)
+      "MXH": 104,       // Max heat setpoint limit (°F)
+      "MNH": 50,        // Min heat setpoint limit (°F)
       "CYC": 0,         // Cycle
-      "DFG": 0,         // Defrost group
+      "DFG": 0,         // Defrost group/mode
       "DF1": 0,         // Defrost setting 1
       "DF2": 0,         // Defrost setting 2
       "DF3": 0,         // Defrost setting 3
-      "DFU": 2,         // Defrost unit
+      "DFU": 2,         // Pool heat/cool deadband (°F)
       "DFL": 1,         // Defrost level
       "MODEL1": 57,     // Model info byte 1
       "MODEL2": 48,     // Model info byte 2
