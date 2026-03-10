@@ -1,0 +1,10 @@
+{
+  "domain": "compass_pool",
+  "name": "Compass WiFi Pool Heater",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "1.0.0"
+}

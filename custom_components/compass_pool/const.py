@@ -1,0 +1,44 @@
+"""Constants for the Compass WiFi Pool Heater integration."""
+
+DOMAIN = "compass_pool"
+
+API_URL = "https://www.captouchwifi.com/icm/api/call"
+DEFAULT_SCAN_INTERVAL = 30  # seconds
+
+# Device register field names (abbreviated names from the device protocol)
+FIELD_MODE = "MD"
+FIELD_HEAT_SETPOINT = "RSV1"
+FIELD_COOL_SETPOINT = "RSV2"
+FIELD_WATER_TEMP = "RMT"
+FIELD_COIL_TEMP = "GEN15"
+FIELD_FAULT_STATUS = "GEN9"
+FIELD_COMPRESSOR = "RMH"
+FIELD_LOCKED = "LKD"
+FIELD_DEADBAND = "DFU"
+FIELD_ANTI_SHORT_CYCLE = "CAL"
+FIELD_DEFROST_END_TEMP = "AXD"
+FIELD_EVAP_CALIBRATION = "HTS"
+FIELD_WATER_CALIBRATION = "DB"
+FIELD_MAX_HEAT = "MXH"
+FIELD_MIN_HEAT = "MNH"
+FIELD_SCHEDULE = "SCH"
+FIELD_FAN = "FAN"
+FIELD_LCS = "LCS"
+
+# Mode values
+MODE_OFF = 0
+MODE_POOL_HEAT = 1
+MODE_POOL_COOL = 2
+MODE_POOL_AUTO = 3
+MODE_SPA = 4
+
+# Compressor status
+COMPRESSOR_OFF = 0
+COMPRESSOR_RUNNING = 128
+
+# GEN9 fault/status bitmask
+FAULT_EVAP_SENSOR = 1
+FAULT_WATER_SENSOR = 2
+FAULT_NO_FLOW = 4
+FAULT_LOW_PRESSURE = 8
+STATUS_HEATING_ACTIVE = 16
